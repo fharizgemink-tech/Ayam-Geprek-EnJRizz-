@@ -4,7 +4,7 @@ const navMenu = document.getElementById("nav-menu");
 const toast = document.getElementById("toast");
 const form = document.getElementById("contact-form");
 
-// ===== 2. HAMBURGER MENU =====
+
 if (hamburger && navMenu) {
   hamburger.addEventListener("click", function () {
     const terbuka = navMenu.classList.toggle("open");
@@ -380,7 +380,7 @@ if (form) {
     const pesan = document.getElementById("pesan").value.trim();
 
     if (nama === "" || pesan === "") {
-      tampilkanNotifikasi("Nama dan pesan wajib diisi ya.", true);
+      tampilkanNotifikasi("Nama dan ulasan wajib diisi ya.", true);
       return;
     }
 
@@ -394,7 +394,7 @@ if (form) {
 
     const isi = "Halo EnJRizz!\n\nNama: " + nama +
       (email ? "\nEmail: " + email : "") +
-      "\n\nPesan: " + pesan;
+      "\n\nUlasan: " + pesan;
 
     window.open(linkWA(isi), "_blank", "noopener");
 
